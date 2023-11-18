@@ -1,5 +1,12 @@
+@import "../node_modules/ngx-toastr/toastr.css";
+
 body{
     background: #0cebeb;
     background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
     background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+}
+
+.fontTitle{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
