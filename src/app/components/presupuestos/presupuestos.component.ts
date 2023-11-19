@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {ToastrService} from 'ngx-toastr'
+import { PresupuestoService } from 'src/app/services/presupuesto.service';
 
 @Component({
   selector: 'app-presupuestos',
@@ -8,11 +10,17 @@ import {ToastrService} from 'ngx-toastr'
 })
 export class PresupuestosComponent implements OnInit {
 
-  cantidad:number;
+  cantidad:any;
   valorincorrecto:boolean;
 
-  constructor(public toastr: ToastrService) { 
-    this.cantidad = 0
+  constructor(
+    public toastr: ToastrService,
+    private presupuestoservice:PresupuestoService,
+    private route: Router
+    ) 
+    
+    { 
+    this.cantidad = null
     this.valorincorrecto = false
   }
 
@@ -44,6 +52,12 @@ export class PresupuestosComponent implements OnInit {
       if(Number(this.cantidad) > 0 ){
         this.valorincorrecto = false
         this.showSuccess()
+
+        this.presupuestoservice.presupuesto = this.cantidad
+        this.presupuestoservice.restante = this.cantidad
+
+        
+        this.route.navigate(['/gastos'])
       }
 
       else{

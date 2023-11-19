@@ -10,12 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { ListGastosComponent } from './components/gastos/list-gastos/list-gastos.component';
+import { CreateGastosComponent } from './components/gastos/create-gastos/create-gastos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresupuestosComponent,
-    GastosComponent
+    GastosComponent,
+    ListGastosComponent,
+    CreateGastosComponent
   ],
   imports: [
     BrowserModule,

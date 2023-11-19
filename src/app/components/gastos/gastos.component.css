@@ -1,0 +1,15 @@
+.sombra{
+    box-shadow: 0px 51px 50px 38px rgba(0,0,0,0.1);
+}
+
+.espacidado{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.margen{
+    margin-left: 100px;
+    margin-right: 100px;
+}
