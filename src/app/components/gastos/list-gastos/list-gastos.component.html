@@ -1,3 +1,29 @@
-<p>
-  list-gastos works!
-</p>
+<h3 class="text-center">Tu Restante</h3>
+<hr>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto sizeAlert">
+    <div class="alert alert-primary">
+      Presupuesto <strong>{{presupuesto}}</strong>
+    </div>
+    
+    
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto sizeAlert">
+    <div class="sizeAlert" [ngClass]="alicarColorRestante()">
+      Restante <strong>{{restante}}</strong>
+    </div>
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between" *ngFor="let list of listgasto">
+              <strong>{{ list.description }}</strong>
+              <span class="badge rounded-pill bg-secondary">${{ list.gastar }}</span>
+          </li>
+      </ul>
+  </div>
+</div>
